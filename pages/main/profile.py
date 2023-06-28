@@ -3,7 +3,7 @@ from os import path
 import streamlit as st
 from utils.components.elements import (Attribute, ListAttribute, SubAttribute,
                                        display)
-from utils.components.html import h2, spacer, title
+from utils.components.html import h2, title
 from utils.components.page import st_user
 from utils.platform.user import is_superadmin
 
