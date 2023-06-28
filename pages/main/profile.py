@@ -3,7 +3,7 @@ from os import path
 import streamlit as st
 from utils.components.elements import (Attribute, ListAttribute, SubAttribute,
                                        display)
-from utils.components.html import h2, title
+from utils.components.html import h2, spacer, title
 from utils.components.page import st_user
 from utils.platform.user import is_superadmin
 
@@ -21,11 +21,14 @@ def show(**kwargs):
         )
 
     st.title(f"Hello, {user.get('name')} 👋🏻")
+    spacer(1)
     st.info(
-        "Find the **code** on _GitHub_: "
+        "Check out the **code** on _GitHub_: "
         "[MagicLit | GitHub](https://github.com/Mortafix/magiclit)",
         icon="ℹ️",
     )
+    spacer(0.5)
+    st.error("_Streamlit_ version: **1.24**", icon="🐙")
     st.divider()
     left_col, right_col = st.columns((2, 5))
 

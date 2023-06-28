@@ -4,7 +4,6 @@ fastReruns = true
 [server]
 runOnSave = true
 headless = true
-maxUploadSize = 20
 enableStaticServing = true
 
 [theme]
