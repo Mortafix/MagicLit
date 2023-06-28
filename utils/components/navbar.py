@@ -37,6 +37,7 @@ def navbar(menu, current_page, logo):
     # icons
     total_noti = 3
     fast_icons = {
+        "code": "https://github.com/Mortafix/magiclit",
         "notifications": "#url@page=profile-notifications",
         "settings": "#url@page=profile-settings",
         "logout": "#logout@c=1",

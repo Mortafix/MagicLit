@@ -215,6 +215,10 @@
     animation: scale-down 2s ease-in-out;
 }
 
+.navbar .icons a:hover i.code {
+    animation: scale-up 2s ease-in-out;
+}
+
 .navbar .icons .noti-n {
     position: absolute;
     background-color: var(--red-lighter);
@@ -328,4 +332,14 @@
         transform: scale(1);
     }
 
+}
+
+@keyframes scale-up {
+    15% {
+        transform: scale(1.2);
+    }
+
+    30% {
+        transform: scale(1);
+    }
 }

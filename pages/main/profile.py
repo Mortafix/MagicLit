@@ -21,7 +21,11 @@ def show(**kwargs):
         )
 
     st.title(f"Hello, {user.get('name')} 👋🏻")
-    st.info("This is the **profile** page (sort of _README_)", icon="👤")
+    st.info(
+        "Find the **code** on _GitHub_: "
+        "[MagicLit | GitHub](https://github.com/Mortafix/magiclit)",
+        icon="ℹ️",
+    )
     st.divider()
     left_col, right_col = st.columns((2, 5))
 
