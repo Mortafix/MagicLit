@@ -1,0 +1,331 @@
+.navbar-container {
+    height: 8rem;
+    background-color: var(--main-lighter);
+    background: linear-gradient(180deg, var(--main-lighter) 70%, transparent 90%);
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.navbar {
+    background-color: var(--main-lightest);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 5rem;
+    padding-inline: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .left,
+.navbar .right {
+    display: flex;
+}
+
+.navbar .left img {
+    height: 100%;
+}
+
+/* PAGES */
+
+.navbar .menu-container {
+    display: none;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: auto 0;
+}
+
+.navbar ul>div {
+    padding-inline: 1.5rem;
+    position: relative;
+    width: max-content;
+}
+
+.navbar ul>div a {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase;
+    font-size: 20px;
+    position: relative;
+}
+
+.navbar .dropdown:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.navbar .dropdown.active>a {
+    color: var(--main-dark);
+    border-bottom: 2px solid;
+}
+
+.navbar .dropdown .snake::before {
+    background-color: var(--main-light);
+}
+
+.navbar .submenu {
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.2s linear;
+    position: absolute;
+    z-index: 201;
+    box-shadow: 2px 2px 0 1px var(--shadow-light);
+    background-color: var(--main-lightest);
+}
+
+.navbar .submenu ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0.6rem;
+    width: max-content;
+}
+
+.navbar .submenu ul li {
+    margin: 0;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+}
+
+.navbar .submenu ul li:hover {
+    background-color: var(--main-light);
+    box-shadow: 2px 2px 0 1px var(--shadow-light);
+}
+
+.navbar .submenu ul li i {
+    margin: -0.3rem 0.4rem 0 0;
+}
+
+.navbar .submenu li a {
+    font-size: 1.2rem;
+}
+
+.navbar .submenu ul li.dev a {
+    color: #00000038;
+    cursor: default;
+}
+
+.navbar .submenu ul li.dev:hover {
+    background-color: unset;
+    box-shadow: unset;
+}
+
+.navbar .submenu ul li span {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    background-color: var(--red-lighter);
+    padding: 0.4rem 0.1rem 0.4rem 0.6rem;
+    color: #FFF;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 0 1px #0000000f;
+    display: none;
+}
+
+.navbar .submenu ul li.dev:hover span {
+    display: inline;
+}
+
+/* USER */
+.navbar .user {
+    color: var(--text);
+    margin-block: auto;
+    margin-inline: auto 0;
+    display: flex;
+}
+
+.navbar .user>div {
+    display: block;
+    width: max-content;
+    background-color: var(--red-lighter);
+    padding: 0.1rem 0.7rem;
+    margin-left: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 0 1px var(--shadow-light);
+    overflow: hidden;
+    border: 2px solid var(--red-lighter);
+}
+
+.navbar .user div i {
+    padding-right: 0.5rem;
+    padding-bottom: 4px;
+}
+
+.navbar .user>div a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .user .azienda {
+    background-color: var(--red-light);
+    border-color: var(--red-light);
+    overflow: unset;
+    position: relative;
+}
+
+/* ICONS */
+
+.navbar .icons {
+    margin-block: auto;
+    margin-left: 1rem;
+}
+
+.navbar .icons a {
+    margin-left: 0.5rem;
+    color: white;
+    background-color: var(--red-dark);
+    padding: 0.4rem 0.3rem;
+    border: 2px solid transparent;
+    border-radius: 10rem;
+    box-shadow: 1px 1px 0 1px var(--shadow-dark);
+    position: relative;
+}
+
+.navbar .icons a>i {
+    font-size: 1.7rem !important;
+    margin-bottom: 0.2rem;
+    margin-left: 0.05rem;
+
+}
+
+.navbar .icons a:hover {
+    border: 2px solid white;
+}
+
+.navbar .icons a:hover i.notifications {
+    animation: bell-ring 2s ease-in-out;
+}
+
+.navbar .icons a:hover i.settings {
+    animation: rotation 2s ease-in-out;
+}
+
+.navbar .icons a:hover i.logout {
+    animation: scale-down 2s ease-in-out;
+}
+
+.navbar .icons .noti-n {
+    position: absolute;
+    background-color: var(--red-lighter);
+    border-radius: 50%;
+    top: -35%;
+    right: -35%;
+    box-shadow: 1px 1px 0px 0px var(--shadow-dark);
+    z-index: 1;
+    width: 1.65rem;
+    height: 1.65rem;
+    text-align: center;
+}
+
+.icons a:hover .noti-n {
+    border: 1px solid white;
+}
+
+.navbar .icons .empty {
+    display: none;
+}
+
+/* INSEDIAMENTI */
+
+.navbar .insediamenti {
+    display: none;
+    position: absolute;
+    top: 2.1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--text);
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 0 1px var(--shadow-dark);
+}
+
+.navbar .insediamenti a {
+    display: flex;
+    justify-content: space-between;
+    width: max-content;
+    max-width: 17rem;
+    align-items: center;
+    background-color: var(--shadow-dark);
+    padding: 0.2rem 0.7rem;
+    border-radius: 0.7rem;
+    box-shadow: 1px 1px 0 1px var(--shadow-dark);
+    font-size: 1.3rem !important;
+}
+
+.navbar .insediamenti span {
+    display: block !important;
+}
+
+.navbar .insediamenti a:hover {
+    background-color: var(--opa-white-light);
+}
+
+.navbar .insediamenti a i {
+    color: var(--tl-green-bg);
+    margin-left: 0.5rem;
+    margin-right: -0.3rem;
+    margin-bottom: -0.3rem !important;
+}
+
+.navbar .insediamenti a i.no-data {
+    color: var(--gray-normal);
+}
+
+.navbar .azienda:hover .insediamenti {
+    display: flex;
+}
+
+/* EFFECT */
+
+@keyframes bell-ring {
+
+    5%,
+    15% {
+        transform: rotate(25deg);
+    }
+
+    10%,
+    20% {
+        transform: rotate(-25deg);
+    }
+
+    25% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotation {
+    10% {
+        transform: rotate(160deg);
+    }
+
+    20% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes scale-down {
+    15% {
+        transform: scale(0.8);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+}

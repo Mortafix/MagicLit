@@ -1,0 +1,135 @@
+/* TITLES */
+h2 i {
+    margin-bottom: 0.3rem;
+    margin-right: 0.5rem;
+}
+
+h4 i {
+    margin-bottom: 0.3rem;
+    margin-right: 0.5rem;
+}
+
+/* MULTIPLE ITEMS */
+
+.multiple-items {
+    margin-bottom: 1rem;
+}
+
+.multiple-items .item {
+    display: inline-flex;
+    background-color: var(--text);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin: 0.2rem 0.5rem;
+    box-shadow: 2px 2px 0 1px var(--shadow-light);
+}
+
+.multiple-items .item a {
+    text-decoration: none;
+    color: white;
+}
+
+.multiple-items .item a:hover {
+    text-decoration: underline;
+}
+
+.multiple-items .item a.ic {
+    color: var(--red-lighter);
+    padding-left: 0.5rem;
+}
+
+.multiple-items .item a.ic:hover {
+    color: var(--red-light);
+}
+
+.multiple-items .item a.ic.blue {
+    margin-right: -0.5rem;
+    color: var(--blue-normal);
+}
+
+.multiple-items .item a.ic.blue:hover {
+    opacity: 0.7;
+}
+
+.multiple-items .item>a>span i {
+    margin-bottom: 0.2rem;
+    padding-right: 0.2rem;
+}
+
+.multiple-items .active {
+    background-color: var(--tl-green-bg);
+}
+
+/* SECTIONS */
+
+.multi-form-navbar {
+    display: block;
+    text-align: center;
+}
+
+.multi-form-navbar .section {
+    background-color: var(--text);
+    display: inline-block;
+    padding: 1rem 2rem;
+    position: relative;
+    border-right: 1px solid white;
+}
+
+.multi-form-navbar .active {
+    background-color: var(--red-lighter);
+    border-right: 10px solid var(--text);
+}
+
+.multi-form-navbar .pre-active {
+    background-color: var(--red-lighter);
+}
+
+.multi-form-navbar .section a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.multi-form-navbar .section:hover a {
+    text-decoration: underline;
+}
+
+.multi-form-navbar .arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid var(--red-lighter);
+    position: absolute;
+    right: -10px;
+    top: 1.4rem;
+}
+
+.section i {
+    color: var(--tl-green-bg);
+    padding-left: 0.67rem;
+    line-height: 0;
+    margin-bottom: 0.3rem;
+}
+
+/* OTP button */
+.otp {
+    background-color: var(--tl-blue-bg);
+    width: max-content;
+    padding: 0.2rem 0.6rem;
+    font-size: 1.3rem;
+    border: 2px solid transparent;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    box-shadow: 2px 2px 0 1px var(--shadow-light);
+}
+
+.otp>a {
+    color: white;
+    text-decoration: none;
+}
+
+.otp i {
+    margin-top: -0.3rem;
+    margin-right: 0.4rem;
+}

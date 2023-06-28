@@ -1,0 +1,440 @@
+/* Day Header */
+
+.date-label {
+    text-align: center;
+    padding: 5px 0 0 30px
+}
+
+.date-label span {
+    font-weight: 600;
+}
+
+.subh {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1;
+    text-transform: capitalize;
+    border-bottom: 0.2rem solid var(--text);
+    margin-top: 1rem;
+}
+
+.subh.today {
+    background-color: var(--opa-white-normal);
+    padding-inline: 0.5rem;
+}
+
+.subh.today a {
+    color: var(--text);
+}
+
+
+.subh span {
+    padding-left: 0.3rem;
+    font-size: 1.1rem;
+    color: var(--text);
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+.subh a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.subh a:hover {
+    opacity: 0.7;
+}
+
+.add-viaggio {
+    color: var(--text) !important;
+    position: absolute;
+    right: 0;
+    margin-right: 0.3rem;
+}
+
+.add-viaggio:hover {
+    opacity: 0.7;
+}
+
+/* Viaggio Box */
+
+.viaggio-box {
+    font-size: 1.1rem;
+    background-color: var(--gray-lighter);
+    border-radius: 7px;
+    padding: 0.4rem 0.5rem;
+    margin: 0.2rem 0;
+    position: relative;
+    box-shadow: 2px 2px 0 1px var(--opa-lighter);
+    cursor: pointer;
+}
+
+.viaggio-box:focus-within {
+    box-shadow: 4px 4px 0 1px var(--opa-dark);
+}
+
+.viaggio-box .name a:hover i {
+    color: var(--opa-dark);
+}
+
+.viaggio-box .name a:hover,
+.viaggio-box.viaggio-done a:hover {
+    background-color: unset !important;
+    padding-inline: 0;
+}
+
+.viaggio-box-active {
+    border: 3px solid var(--opa-dark);
+}
+
+.viaggio-autista-active,
+.viaggio-rifiutato {
+    background-color: var(--red-lighter);
+    color: white;
+}
+
+.viaggio-done {
+    color: var(--text);
+    background-color: var(--tl-green-bg);
+}
+
+.viaggio-box span {
+    font-weight: bold;
+}
+
+.viaggio-box i {
+    vertical-align: middle;
+    margin: -3px 0.2rem 0 0;
+}
+
+.viaggio-box p {
+    margin: 0;
+    transition: max-height 0.15s ease-out;
+    -webkit-transition: max-height 0.15s ease-out;
+    overflow: hidden;
+    max-height: 0;
+    text-align: center;
+    display: flex;
+}
+
+
+.viaggio-box .who {
+    font-weight: 100;
+    text-align: center;
+    display: block;
+    font-size: 0.8rem;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.viaggio-box:focus-within p,
+.viaggio-box:focus-within .who {
+    margin-top: 0.5rem;
+    max-height: fit-content;
+}
+
+.viaggio-box div {
+    line-height: 1.3rem;
+}
+
+.viaggio-done .viaggio-icon-box {
+    background-color: var(--main-darker);
+}
+
+.viaggio-icon-box {
+    background-color: var(--red-dark);
+    border-radius: 10px;
+}
+
+.viaggio-icon-box i {
+    color: white;
+}
+
+.viaggio-icon-box a {
+    padding: 0.2rem 0;
+    width: 100%;
+    border-right: 1.5px solid white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.viaggio-box.viaggio-done a:hover {
+    background-color: var(--main-darkest);
+}
+
+.viaggio-box a:hover {
+    background-color: var(--red-darker);
+    padding-inline: 0.5rem;
+}
+
+.viaggio-icon-box a:nth-child(2) {
+    border-right: 1.5px solid white;
+    border-left: 1.5px solid white;
+}
+
+.viaggio-icon-box a:first-child,
+.viaggio-icon-box a:last-child {
+    border-right: none !important;
+}
+
+.viaggio-icon-box span {
+    color: white;
+    font-weight: normal;
+    display: none;
+}
+
+.viaggio-icon-box a:hover span {
+    display: inline;
+}
+
+.viaggio-autisti-box {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+    justify-content: center;
+}
+
+.viaggio-autisti-box a {
+    background-color: var(--red-lighter);
+    color: white;
+    text-decoration: none;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.7rem;
+}
+
+.viaggio-autisti-box a:hover {
+    background-color: var(--red-light);
+}
+
+.viaggio-autisti-box a {
+    border-bottom: 1.5px solid white;
+}
+
+.viaggio-autisti-box a:last-child {
+    border-bottom: none;
+}
+
+.box-avvisi,
+.viaggio-approvato {
+    background-color: var(--tl-blue-bg);
+    color: white;
+}
+
+.box-avvisi .viaggio-icon-box,
+.viaggio-approvato .viaggio-icon-box {
+    background-color: var(--blue-dark);
+}
+
+.box-avvisi .viaggio-icon-box a:hover,
+.viaggio-approvato .viaggio-icon-box a:hover {
+    background-color: var(--blue-darker);
+}
+
+.viaggio-box .stato {
+    background-color: var(--opa-dark);
+    color: white;
+    border-radius: 1rem;
+    width: fit-content;
+    padding: 0.2rem 0.7rem;
+    margin-top: 0.3rem;
+}
+
+.viaggio-box .file {
+    background-color: var(--opa-light);
+    padding: 0.2rem 0.5rem;
+    color: var(--text);
+}
+
+.viaggio-box .file a {
+    color: var(--red-lighter);
+}
+
+.viaggio-box .file a:hover {
+    background-color: unset;
+    color: var(--red-light);
+    padding-inline: 0;
+}
+
+.viaggio-box .file a i {
+    margin-top: -0.15rem;
+    margin-left: 0.2rem;
+}
+
+.viaggio-box a .warning {
+    color: var(--tl-yellow-bg);
+    margin-left: 0.3rem;
+}
+
+.viaggio-new {
+    border: 3px solid var(--main-light);
+    animation: green-flash 0.3s 7;
+}
+
+/* ICONS */
+
+.icon-periodic {
+    color: var(--opa-light);
+    margin-left: 0.3rem !important;
+}
+
+.icon-periodic.absolute {
+    position: absolute;
+    display: block;
+    top: 0.4rem;
+    right: 0;
+    border-radius: 50%;
+    color: var(--tl-yellow-bg);
+    font-size: 2rem !important;
+}
+
+span.urgent {
+    position: absolute;
+    right: 0.4rem;
+    background-color: var(--tl-orange-bg);
+    top: 0.4rem;
+    padding: 0.2rem 0.35rem;
+    border-radius: 0.4rem;
+    color: var(--opa-dark);
+    font-size: 1.4rem;
+    font-weight: 600;
+    box-shadow: 1px 1px 0 1px var(--opa-lighter);
+}
+
+.urgent i {
+    margin: 0;
+    margin-top: -0.25rem;
+}
+
+/* ARROWS */
+.sort-arrows {
+    position: absolute;
+    width: 95%;
+    text-align: right;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.sort-arrows-bottom {
+    bottom: 0;
+}
+
+.sort-arrows i {
+    color: var(--opa-normal);
+}
+
+.sort-arrows a:hover,
+.sort-arrows i:hover {
+    background-color: transparent;
+    color: var(--opa-dark);
+    padding-inline: 0;
+}
+
+
+
+.viaggio-box:focus-within .sort-arrows {
+    visibility: visible;
+}
+
+.viaggio-box:focus-within .sort-arrows-bottom {
+    bottom: 0.2rem;
+}
+
+.viaggio-done .sort-arrows {
+    visibility: hidden !important;
+}
+
+/* DATE SELECTOR */
+.date-selector {
+    display: block;
+}
+
+.date-selector .dates {
+    background-color: var(--text);
+    width: fit-content;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.dates>i {
+    color: white;
+    opacity: 0.6;
+    margin: -0.2rem 0.5rem 0 0.5rem;
+}
+
+.dates>a i {
+    margin-top: -0.2rem;
+}
+
+.dates>a {
+    color: var(--red-lighter);
+    margin: 0.3rem;
+}
+
+.dates>a:hover {
+    color: var(--red-light);
+}
+
+.dates .today {
+    background-color: var(--red-lighter);
+    text-align: center;
+    padding: 0.1rem 2rem;
+    border-radius: 1rem;
+    margin-left: 0.2rem;
+}
+
+.dates .today:hover {
+    background-color: var(--red-light);
+}
+
+.dates .today a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Message */
+.info-message {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.message {
+    background-color: var(--opa-white-normal);
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 0 1px var(--opa-light);
+    width: max-content;
+}
+
+.message span {
+    background-color: var(--opa-light);
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 0 0 var(--opa-lighter);
+}
+
+.message span i {
+    margin-bottom: 0.3rem;
+    margin-right: 0.3rem;
+}
+
+.message div {
+    border-left: 2px solid var(--opa-normal);
+    margin-left: 0.4rem;
+    margin-top: 0.3rem;
+    padding-left: 0.7rem;
+}

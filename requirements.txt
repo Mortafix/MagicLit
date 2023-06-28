@@ -1,0 +1,4 @@
+streamlit==1.24
+streamlit_autorefresh==1.0.1
+streamlit_url_fragment==0.2.1
+watchdog

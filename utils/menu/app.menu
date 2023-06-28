@@ -1,0 +1,24 @@
+* Components : dashboard
+	- Tables : table_chart @ component-table
+	- Form : checklist @ component-form
+	- Selectbox : check_box @ component-selectbox
+	- Notifications : notifications @ component-notification
+	- Titles : text_fields @ component-title
+	- Elements : dashboard @ component-element
+	- Extra : area_chart @ component-extra
+
+* Superhero : self_improvement
+	- Thor : hardware @ hero-thor
+	- The Flash : flash_on @ hero-flash
+	- Captain America : local_police @ hero-cap
+	- Goku : ramen_dining @ hero-goku
+	- Netero : back_hand @ hero-netero
+	-? Blue Beetle : bug_report @ hero-blue-beetle
+	-/ Invisible Man : visibility_off @ hero-invisible-man
+
+*! Super Admin : diamond
+	- Admins : admin_panel_settings @ admins-list
+
++1 Profile @ profile
++ Settings @ profile-settings
++ Notify @ profile-notifications

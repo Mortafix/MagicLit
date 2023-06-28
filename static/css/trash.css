@@ -1,0 +1,46 @@
+/* MAIN CARD */
+
+.attributes {
+    background-color: #ffffff8a;
+    width: max-content;
+    max-width: 100%;
+    padding: 0.15rem 0.7rem;
+    margin-bottom: 1rem;
+    box-shadow: 2px 2px 0 1px #00000014;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.attributes .title {
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.attribute-row {
+    margin-block: 0.4rem;
+}
+
+.attributes span {
+    background-color: var(--red-lighter);
+    color: white;
+    padding: 0.1rem 0.5rem;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+}
+
+/* MULTI ELEMENTS */
+.attributes .sub {
+    padding-left: 1rem;
+    margin-left: 1rem;
+    border-left: 2px solid #0000001c;
+}
+
+.attributes .sub span {
+    background-color: var(--red-light);
+}
+
+.attributes .sub .sub span {
+    background-color: var(--red-dark);
+}

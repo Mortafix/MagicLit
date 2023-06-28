@@ -1,0 +1,16 @@
+[runner]
+fastReruns = true
+
+[server]
+runOnSave = true
+headless = true
+maxUploadSize = 20
+enableStaticServing = true
+
+[theme]
+base="light"
+primaryColor="#79BDF8"
+backgroundColor="#B5DCFF"
+secondaryBackgroundColor="#DCEEFF"
+textColor="#31333F"
+font="sans serif"

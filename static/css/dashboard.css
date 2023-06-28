@@ -1,0 +1,252 @@
+/* USER */
+
+.hello-user {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.hello {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.hello span {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.hello p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+.day-info {
+    display: flex;
+}
+
+.day-calendar {
+    display: flex;
+    background-color: var(--main-lightest);
+    height: fit-content;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.day-calendar span {
+    padding: 0.2rem 0.7rem;
+    min-width: 5rem;
+    background-color: white
+}
+
+.day-calendar span.main {
+    background-color: var(--red-lighter);
+    color: white;
+    text-transform: capitalize;
+}
+
+.day-calendar span.wheater {
+    background-color: var(--blue-light);
+    padding-inline: 1.5rem;
+}
+
+.day-calendar span.wheater i {
+    margin-bottom: 0.3rem;
+}
+
+.day-calendar span.wheater img {
+    width: 2rem;
+    margin-top: -0.3rem;
+    margin-left: 0.5rem;
+}
+
+/* STATUS & VERSION */
+
+.info-bars {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-status {
+    font-size: 1.3rem;
+    width: fit-content;
+    margin-block: 1rem;
+    padding: 0.5rem 1rem;
+    display: block;
+    overflow: hidden;
+}
+
+.info-status>a {
+    color: var(--opa-dark);
+    text-decoration: none;
+}
+
+.info-status b {
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
+
+.info-status i {
+    margin-bottom: 0.3rem;
+    margin-left: 0.5rem;
+}
+
+.info-status.ok {
+    background-color: var(--tl-green-bg);
+    border: 2px solid transparent;
+}
+
+.info-status.nope {
+    background-color: var(--tl-red-bg);
+    border: 2px solid transparent;
+}
+
+.info-status.version {
+    background-color: var(--blue-normal);
+    border: 2px solid transparent;
+}
+
+.info-status.version>a {
+    display: flex;
+}
+
+.info-status.version .version {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-right: 0.5rem;
+    background-color: var(--opa-white-light);
+    padding: 0.1rem 0.5rem;
+    text-align: center;
+    color: var(--opa-dark);
+    margin-block: auto;
+}
+
+.info-status.version .version .number {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* STATS */
+
+.line-stats {
+    background: var(--main-lightest);
+    background: linear-gradient(90deg, var(--main-lightest) 0%, var(--main-lightest) 60%, transparent 95%);
+    display: flex;
+    border-radius: 1rem;
+    margin-block: 1rem;
+}
+
+.line-stats .line-title {
+    margin: auto 1.5rem;
+}
+
+.line-stats .line-title i {
+    font-size: 3rem !important;
+}
+
+.line-stats .sheet {
+    display: flex;
+    gap: 1rem;
+    gap: 1.5rem;
+    width: 100%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.line-stats .sheet::-webkit-scrollbar {
+    display: none;
+}
+
+.line-stats .card-stats {
+    background-color: var(--opa-white-normal);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0.5rem 1.2rem;
+    text-align: center;
+    box-shadow: 2px 2px 0 1px var(--shadow-dark);
+    border-radius: 0.5rem;
+    margin-bottom: 3px;
+    align-items: center;
+    border: 3px solid transparent !important;
+    cursor: default;
+}
+
+.card-stats:hover:has(a) {
+    border: 3px solid var(--text) !important;
+    background-color: var(--gray-lighter);
+}
+
+.card-stats a {
+    text-decoration: none;
+}
+
+.card-stats div {
+    color: var(--text);
+}
+
+.card-stats .category {
+    font-size: 1.2rem;
+    color: var(--gray-normal);
+}
+
+.card-stats .value {
+    font-size: 2rem;
+    font-weight: 600;
+    width: max-content;
+    margin-inline: auto;
+}
+
+.card-stats .value.trend {
+    display: flex;
+}
+
+.card-stats .value.trend i {
+    font-size: 2.5rem !important;
+    margin-right: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+.card-stats .value.trend.up {
+    color: var(--tl-green-bg);
+}
+
+.card-stats .value.trend.down {
+    color: var(--tl-red-bg);
+}
+
+.card-stats .value.trend.flat {
+    color: var(--tl-yellow-bg);
+}
+
+.card-stats .value.trend i {
+    font-size: 2.5rem !important;
+    margin-right: 0.5rem;
+}
+
+.card-stats .subtitle {
+    color: var(--gray-light);
+}
+
+/* GUIDES */
+.guides-box {
+    background-color: var(--opa-white-normal);
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    margin-block: 1rem 2rem;
+    display: block;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.guides-box a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.guides-box:hover {
+    text-decoration: underline;
+}

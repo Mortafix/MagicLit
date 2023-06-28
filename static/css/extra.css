@@ -1,0 +1,126 @@
+.logo {
+    margin-block: -1rem 1rem;
+    margin-inline: auto;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.material-icons {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.art svg {
+    width: 100%;
+    margin-top: -3rem;
+}
+
+/* CONTATTI */
+.contact {
+    background-color: var(--text);
+    padding: 0.5rem 1rem;
+    display: block;
+    width: fit-content;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact a:last-child {
+    color: var(--red-lighter);
+    padding-left: 0.5rem;
+}
+
+.contact a:hover:last-child {
+    color: var(--red-light);
+}
+
+.contact span {
+    text-decoration: underline;
+    padding-left: 0.4rem;
+}
+
+.contact span:last-child {
+    text-decoration: none;
+    color: var(--gray-normal);
+}
+
+
+/* REDIRECT */
+.redirect-btn {
+    font-size: 1.2rem;
+    background-color: var(--red-lighter);
+    padding: 0.3rem 0.8rem;
+    border: 2px solid transparent;
+    box-shadow: 2px 2px 0px 1px var(--shadow-light);
+    width: fit-content;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.redirect-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.redirect-btn i {
+    margin-top: -0.3rem;
+    margin-right: 0.4rem;
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+    background-color: white;
+    position: relative;
+    height: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    outline: 7px solid var(--main-lighter);
+    margin-block: 0.5rem;
+}
+
+.progress-bar label {
+    display: none;
+    white-space: nowrap;
+    font-size: 1.1rem;
+    background-color: var(--text);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    box-shadow: 2px 2px 0 1px var(--opa-light);
+    margin: 1.5rem 0 0 0.5rem;
+    width: max-content;
+    position: absolute;
+}
+
+.progress-bar div {
+    position: absolute;
+    font-weight: 600;
+}
+
+.progress-bar .current {
+    left: 0;
+    top: -1.5rem;
+    margin-left: -0.5rem;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.progress-bar .total {
+    right: 0.5rem;
+    bottom: -1.75rem;
+}
+
+.progress-bar span:hover {
+    outline: 3px solid;
+    z-index: 1;
+}
+
+.progress-bar span:hover label {
+    display: block;
+}

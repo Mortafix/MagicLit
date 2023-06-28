@@ -1,0 +1,227 @@
+/* main container */
+.block-container {
+    padding-block: 0;
+    padding-inline: 2rem !important;
+    max-width: 80rem;
+}
+
+.block-container>div>div:first-child[data-testid="stVerticalBlock"] {
+    gap: 0;
+}
+
+.block-container>div>div>div:nth-child(3) {
+    visibility: collapse;
+    display: flex;
+}
+
+/* titles */
+
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+    visibility: hidden;
+}
+
+/* sidebar button */
+[data-testid="collapsedControl"] {
+    top: 0.8rem;
+}
+
+[data-testid="stSidebar"] {
+    box-shadow: 5px 0px 0 0 var(--shadow-light);
+}
+
+[data-testid="stSidebar"] .block-container {
+    padding-inline: 0 !important;
+}
+
+
+/* forms */
+[data-testid="stForm"] {
+    background-color: var(--main-light);
+    border: none;
+    box-shadow: 5px 5px 0px 1px var(--opa-lighter);
+    border-radius: 0.5rem 0 0 0;
+    margin-block: 1rem;
+}
+
+/* buttons */
+[data-testid="stFormSubmitButton"]>button,
+[data-testid="stFileUploadDropzone"] button {
+    color: var(--text);
+    border: 2px solid transparent !important;
+    box-shadow: 2px 2px 0 2px var(--opa-lighter);
+}
+
+.stButton>button,
+.stDownloadButton>button {
+    border: 2px solid var(--gray-light);
+    box-shadow: 2px 2px 0 1px var(--opa-light);
+}
+
+[data-testid="stFormSubmitButton"] p,
+.stButton p,
+.stDownloadButton p,
+[data-testid="stFileUploadDropzone"] button {
+    font-size: 1rem;
+}
+
+[data-testid="stFormSubmitButton"]>button:hover,
+.stButton>button:hover,
+.stDownloadButton>button:hover,
+[data-testid="stFileUploadDropzone"] button:hover {
+    border: 2px solid var(--main-dark) !important;
+    color: var(--main-dark);
+}
+
+[data-testid="stFormSubmitButton"]>button:active,
+.stButton>button:active,
+.stDownloadButton>button:active,
+[data-testid="stFileUploadDropzone"] button:active {
+    background-color: var(--main-dark);
+    color: white;
+    border-color: var(--main-dark) !important;
+}
+
+/* container */
+[data-testid="stExpander"] {
+    background-color: var(--opa-white-normal);
+    box-shadow: 5px 5px 0px 0px var(--opa-lighter);
+}
+
+[data-testid="stExpander"] ul {
+    border: 0;
+}
+
+[data-testid="stExpander"] .streamlit-expanderHeader p {
+    font-size: 1.1rem;
+}
+
+[data-testid="stForm"] [data-testid="stExpander"] {
+    background-color: var(--opa-white-light);
+}
+
+/* json */
+[data-testid="stJson"] .react-json-view {
+    background-color: var(--opa-white-normal) !important;
+    padding: 0.7rem 1rem;
+}
+
+/* alert */
+.stAlert {
+    box-shadow: 3px 3px 2px 1px var(--opa-lighter);
+}
+
+/* enlarge images */
+button[title="View fullscreen"] {
+    visibility: hidden;
+}
+
+/* sidebar */
+[data-testid="stSidebar"]>div>div:last-child {
+    padding-block: 3rem;
+}
+
+/* tabs */
+[data-baseweb="tab-list"] {
+    flex-wrap: wrap;
+}
+
+button[role="tab"] {
+    background-color: var(--opa-white-normal) !important;
+    padding: 0.6rem;
+    box-shadow: 2px 2px 0 1px var(--opa-lighter);
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+}
+
+button[role="tab"]:hover {
+    color: var(--text);
+    font-size: 1.1rem;
+    border: 2px solid var(--main-light);
+}
+
+button[tabindex="0"] {
+    border: 2px solid transparent;
+    background-color: var(--main-light) !important;
+}
+
+button[tabindex="0"] p {
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+[data-baseweb="tab-highlight"] {
+    width: 0;
+}
+
+[data-baseweb="tab-border"] {
+    margin-top: 0.5rem;
+    background: linear-gradient(90deg, var(--opa-light) 10%, transparent 100%);
+}
+
+/* images */
+[data-testid="stImage"] {
+    width: 100%;
+}
+
+[data-testid="stImage"] img {
+    background-color: white;
+    box-shadow: 3px 3px 0 1px var(--shadow-light);
+}
+
+/* file upload */
+[data-testid="stFileUploadDropzone"] svg {
+    color: var(--main-light);
+}
+
+[data-testid="stFileUploadDropzone"]>div>div>span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+}
+
+[data-testid="stFileUploadDropzone"]>div>div>span::after {
+    content: "Clicca o trascina i file";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--text);
+}
+
+[data-testid="stFileUploadDropzone"]>button,
+[data-testid="stFileUploadDropzone"]>button:hover,
+[data-testid="stFileUploadDropzone"]>button:active {
+    position: relative;
+    display: inline-block;
+    color: transparent !important;
+}
+
+[data-testid="stFileUploadDropzone"]>button::after {
+    content: "Sfoglia file";
+    position: absolute;
+    top: 0.3rem;
+    left: 1.1rem;
+    color: var(--text);
+}
+
+[data-testid="stFileUploadDropzone"]>button:hover::after {
+    color: var(--text);
+}
+
+/* tooltip */
+[data-baseweb="tooltip"]>div {
+    background-color: white;
+    border-left: 5px solid var(--main-light);
+    border-radius: 0 0.5rem 0.5rem 0;
+    box-shadow: 2px 2px 0 1px var(--opa-light);
+}
+
+[data-baseweb="tooltip"] p {
+    font-size: 1rem !important;
+}
+
+code {
+    color: var(--rainbow-8);
+}

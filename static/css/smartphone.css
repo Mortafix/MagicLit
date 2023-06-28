@@ -1,0 +1,226 @@
+@media screen and (max-width: 650px) {
+
+    /* common filters */
+    .wrapper-filters {
+        text-align: center;
+    }
+
+    .common-filters {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* date selector */
+    .date-selector .dates {
+        width: auto;
+        text-align: center;
+    }
+
+    .today {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .menu-container {
+        position: relative;
+    }
+
+    .navbar>ul {
+        width: max-content !important;
+        left: 50%;
+        transform: translateX(-70%);
+        align-items: center;
+    }
+
+    .menu-container:hover~ul,
+    .navbar>ul:hover {
+        flex-direction: column;
+    }
+
+    .navbar .submenu {
+        position: unset;
+        display: none;
+    }
+
+    .navbar .dropdown:last-child .submenu {
+        bottom: 0;
+        top: unset;
+        right: unset !important;
+    }
+
+    .navbar ul>div {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding-inline: 2rem 0.5rem;
+    }
+
+    .navbar img {
+        height: 2rem;
+        transform: translate(-1.5rem, 1.5rem) rotate(-90deg) scale(0.8);
+        margin-right: -3rem;
+    }
+
+    .navbar .user span {
+        display: none;
+    }
+
+    .navbar .user>div {
+        padding: 0.1rem 0.2rem;
+        margin-left: 0;
+    }
+
+    .navbar .user div i {
+        padding: 0 !important;
+        margin-bottom: 0.2rem;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+
+    .block-container {
+        padding-inline: 1rem !important;
+    }
+
+    .navbar>ul {
+        display: none;
+        position: absolute;
+        background-color: var(--main-lightest);
+        box-shadow: 2px 2px 0 1px var(--opa-lighter);
+        margin-top: 5rem;
+        z-index: 200;
+        width: 100%;
+        margin-left: -2rem;
+    }
+
+    .navbar>ul>div {
+        margin-block: 0.2rem;
+    }
+
+    .navbar .submenu li {
+        padding-inline: 0.5rem;
+    }
+
+    .navbar .user {
+        gap: 0.5rem;
+    }
+
+    .navbar .icons {
+        display: flex;
+        gap: 0.4rem;
+    }
+
+    .navbar .icons a {
+        margin: 0;
+        padding: 0.1rem 0.3rem;
+    }
+
+    .navbar .icons a i {
+        font-size: 1.4rem;
+    }
+
+    .navbar .icons .noti-n {
+        font-size: 0.8rem;
+        width: 1.35rem;
+        height: 1.34rem;
+    }
+
+    .menu-container:hover~ul,
+    .navbar>ul:hover {
+        display: flex;
+        padding: 0.5rem 1rem;
+        justify-content: space-around;
+    }
+
+    .menu-container {
+        display: block !important;
+        background-color: transparent;
+        cursor: pointer;
+        width: 100%;
+        position: relative;
+    }
+
+    .menu-container i {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--opa-light);
+        padding: 0.5rem;
+        border-radius: 50%;
+    }
+
+    .navbar .dropdown:last-child .submenu {
+        right: 0;
+    }
+
+    /* DASHBORD */
+    .hello {
+        text-align: center;
+    }
+
+    .hello-user {
+        flex-direction: column;
+    }
+
+    .day-calendar {
+        margin-inline: auto;
+    }
+
+    .info-bars {
+        flex-direction: column;
+        margin-block: 0.5rem;
+    }
+
+    .info-status {
+        margin-block: 0.5rem;
+        margin-inline: auto;
+    }
+
+    /* other */
+    .notifications .notify a {
+        flex-direction: column;
+    }
+
+    .redirect-btn {
+        margin-bottom: 1rem;
+    }
+
+    .common-filters .flt {
+        margin-block: 0.5rem;
+    }
+
+    td .container:hover .funcs {
+        flex-direction: column;
+    }
+
+    .chat-title {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1900px) {
+    .navbar .user span {
+        display: none;
+    }
+
+    .navbar .user div i {
+        padding-right: 0;
+    }
+
+    .navbar ul>div {
+        padding-inline: 0.6rem;
+    }
+
+    .navbar ul>div a {
+        font-size: 1rem;
+    }
+
+
+}

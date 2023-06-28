@@ -1,0 +1,196 @@
+.profile {
+    background-color: var(--gray-lighter);
+    color: var(--text);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: block;
+    box-shadow: 4px 4px 0 2px var(--opa-dark);
+    position: relative;
+    min-height: 14rem;
+}
+
+.profile .header {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.header>span {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    color: var(--gray-normal);
+    font-weight: normal;
+}
+
+.profile p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+
+.profile p>i {
+    margin: 0;
+    margin-bottom: 0.3rem;
+    margin-right: 0.2rem;
+}
+
+.header p>span {
+    color: var(--gray-normal);
+    margin-left: 0.5rem;
+}
+
+.header>p>a {
+    color: var(--text);
+    margin-left: 0.5rem;
+}
+
+.header>p>a:hover {
+    opacity: 0.7;
+}
+
+.header>p>a>i {
+    margin-bottom: 0.3rem;
+    margin-right: 0.2rem;
+}
+
+.who-add {
+    position: absolute;
+    bottom: 1rem;
+}
+
+.who-add span {
+    font-weight: bold;
+}
+
+/* ICON FUNCTIONS */
+
+.icon-funcs {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.icon-funcs a {
+    text-decoration: none;
+    margin-inline: auto 0;
+}
+
+.icon-funcs .icon {
+    background-color: var(--text);
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 5rem;
+    box-shadow: 2px 2px 0 0 var(--opa-light);
+}
+
+.icon-funcs .icon i {
+    margin-bottom: 0.1rem;
+}
+
+.icon-funcs .icon span {
+    display: none;
+    margin-right: 0.3rem;
+}
+
+.icon-funcs a:hover .icon span {
+    display: inline;
+}
+
+.icon-funcs .icon.active {
+    background-color: var(--gray-light);
+    color: var(--text);
+    box-shadow: 2px 2px 0 0 var(--opa-dark);
+}
+
+.icon-funcs .icon.active span {
+    display: inline;
+}
+
+/* NOTIFICATIONS */
+
+.notifications .notify {
+    background: white;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 0 2px var(--opa-light);
+}
+
+.notifications .notify:hover {
+    border: 3px solid var(--red-lighter);
+    background-color: var(--gray-lighter);
+}
+
+.notifications .notify:hover .date {
+    text-decoration: none;
+}
+
+.notifications .notify.read {
+    opacity: 0.5;
+}
+
+.notifications .notify a {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.notify .text span {
+    background-color: var(--opa-lighter);
+    padding: 0.2rem 0.3rem;
+}
+
+.notify .date {
+    text-transform: uppercase;
+    min-width: 12rem;
+    text-align: right;
+}
+
+.notify .date>i {
+    color: var(--red-lighter);
+    margin-right: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.notify.read .date>i {
+    color: var(--main-dark);
+}
+
+.notify .text i {
+    margin-right: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.notify p.info {
+    margin: 0.2rem 0 0 0.7rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--gray-light);
+    color: var(--gray-light);
+}
+
+/* button */
+.btn-profile {
+    width: 100%;
+    background-color: var(--red-lighter);
+    text-align: center;
+    padding-block: 0.5rem;
+    margin-block: 1.5rem;
+    border-radius: 2rem;
+    border: 3px solid transparent;
+    box-shadow: 2px 2px 0 1px var(--shadow-dark);
+    overflow: hidden;
+    display: block;
+}
+
+.btn-profile a {
+    color: white;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.1rem;
+}

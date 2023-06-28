@@ -1,0 +1,65 @@
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(110%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.notification {
+    animation: 0.5s ease-out 0s 1 slideInFromRight;
+    background-color: var(--gray-lighter);
+    max-width: max-content;
+    position: fixed;
+    z-index: 102;
+    top: 5.5rem;
+    right: 1rem;
+    border-radius: 0 0.4rem 0.4rem 0;
+    line-height: 1.5rem;
+    box-shadow: 2px 2px 0 1px var(--opa-light);
+    border-left: 6px solid transparent;
+    padding: 0.6rem 1.1rem 0.5rem;
+    font-size: 1.3rem;
+}
+
+.notification a {
+    text-decoration: none;
+    color: var(--text);
+    opacity: 0.85;
+}
+
+.notification a:hover {
+    text-decoration: none;
+}
+
+.notification .material-icons {
+    margin-bottom: 0.2rem;
+    margin-right: 0.5rem;
+}
+
+
+.noti-success,
+.noti-success i {
+    border-color: var(--tl-green-bg);
+    color: var(--tl-green-bg);
+}
+
+.noti-info,
+.noti-info i {
+    border-color: var(--tl-blue-bg);
+    color: var(--tl-blue-bg);
+}
+
+.noti-warning,
+.noti-warning i {
+    border-color: var(--tl-orange-bg);
+    color: var(--tl-orange-bg);
+}
+
+.noti-error,
+.noti-error i {
+    border-color: var(--tl-red-bg);
+    color: var(--tl-red-bg);
+}
