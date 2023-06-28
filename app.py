@@ -13,7 +13,7 @@ from utils.platform.user import check_login
 from utils.web.fragment import skip_fragment
 
 st.set_page_config(
-    page_title="Super Streamlit",
+    page_title="Magiclit",
     page_icon="app/static/images/favicon.png",
     layout="wide",
     initial_sidebar_state="collapsed",
