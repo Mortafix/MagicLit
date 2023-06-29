@@ -276,9 +276,9 @@ def tables(**kwargs):
 
     # filters form
     _, fast_filter_col = st.columns((1, 2))
-    filtri_expander = st.expander("Filtri **avanzati**")
-    filtri_form = filtri_expander.form("filtri")
-    cols = filtri_form.columns(4)
+    filter_expander = st.expander("Advanced **filters**")
+    filter_form = filter_expander.form("filtri")
+    cols = filter_form.columns(4)
     f_name = cols[0].selectbox("Name", [""] + sorted([row[1] for row in raw_data]))
     f_sex = sex_select(cols[1], empty=True)
     f_ages = cols[2].slider("Age", value=(0, 1000), step=1)
