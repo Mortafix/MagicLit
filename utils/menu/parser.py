@@ -10,16 +10,16 @@ class Menu(dict):
         self.pages = main_pages
         self.free_pages = list()
         pages_redirect = {page.url: page for page in main_pages if page.url}
-        pages_redirect |= {
+        subpages_redirect = {
             page.url: page for subpages in main_pages for page in subpages.pages
         }
-        pages_redirect |= {
+        subred_redirect = {
             page.redirect.url: page.redirect
             for subpages in main_pages
             for page in subpages.pages
             if page.redirect
         }
-        self.update(**pages_redirect)
+        self.update({**pages_redirect, **subpages_redirect, **subred_redirect})
 
     def first_page(self, page):
         self.first = page
@@ -30,7 +30,7 @@ class Menu(dict):
         free_rediret_entries = {
             page.redirect.url: page.redirect for page in pages if page.redirect
         }
-        pages_to_add = free_pages_entries | free_rediret_entries
+        pages_to_add = {**free_pages_entries, **free_rediret_entries}
         self.update(**pages_to_add)
 
     def __getitem__(self, key):

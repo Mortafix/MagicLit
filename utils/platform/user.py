@@ -10,7 +10,7 @@ def check_login(mail, password, component=st):
     # login goes BBRRR!
     if True:  # verify_password(user, password):
         st.session_state.user = {"name": "Mario", "username": "SuperMario"}
-        # st.session_state.user |= {"super": True}  # enable this to make user SUPER
+        # st.session_state.user.update(super=True)  # enable this to make user SUPER
         st.session_state.is_login = True
         return True
     component.error("_Ops!_ **Mail** and/or **password** are not correct..", icon="🚫")

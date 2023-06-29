@@ -31,7 +31,7 @@ def smart_select(
         idx = list(elements).index(selected) + (1 if empty else 0)
     if multi and selected:
         selected = [el for el in selected if el in elements]
-    el_list = ({"": base_element} if empty else dict()) | elements
+    el_list = {**({"": base_element} if empty else dict()), **elements}
     fmt_func = lambda x: base_fmt(x, el_list.get(x)) + (add_fmt and add_fmt(x))
     st_func = component.multiselect if multi else component.selectbox
     selection = {"default": selected} if multi else {"index": idx}
