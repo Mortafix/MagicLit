@@ -58,10 +58,10 @@ def main(fragment, params, static_attr):
             placeholder="Password",
             autocomplete="current-password",
         )
-        if login_form.form_submit_button("Accedi 👤", use_container_width=True):
+        if login_form.form_submit_button("Login 👤", use_container_width=True):
             if check_login(username, password, component=login_form):
                 skip_fragment()
-                st.experimental_rerun()
+                st.rerun()
         return
 
     # ---- MENU

@@ -28,7 +28,7 @@ def show(**kwargs):
         icon="ℹ️",
     )
     spacer(0.5)
-    st.error("_Streamlit_ version: **1.24**", icon="🐙")
+    st.error("_Streamlit_ version: **1.27.2**", icon="🐙")
     st.divider()
     left_col, right_col = st.columns((2, 5))
 

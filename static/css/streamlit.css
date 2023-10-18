@@ -23,6 +23,15 @@ h4 a {
     visibility: hidden;
 }
 
+h1 span span,
+h2 span span,
+h3 span span,
+h4 span span {
+    background-color: var(--shadow-light);
+    font-weight: 100;
+    padding: 0.1rem 0.5rem;
+}
+
 /* sidebar button */
 [data-testid="collapsedControl"] {
     top: 0.8rem;
@@ -113,10 +122,6 @@ h4 a {
     box-shadow: 3px 3px 2px 1px var(--opa-lighter);
 }
 
-/* enlarge images */
-button[title="View fullscreen"] {
-    visibility: hidden;
-}
 
 /* sidebar */
 [data-testid="stSidebar"]>div>div:last-child {
@@ -167,8 +172,12 @@ button[tabindex="0"] p {
 }
 
 [data-testid="stImage"] img {
-    background-color: white;
+    background-color: var(--opa-white-light);
     box-shadow: 3px 3px 0 1px var(--shadow-light);
+}
+
+button[title="View fullscreen"] {
+    visibility: hidden;
 }
 
 /* file upload */
@@ -220,6 +229,25 @@ button[tabindex="0"] p {
 
 [data-baseweb="tooltip"] p {
     font-size: 1rem !important;
+}
+
+/* toast */
+[data-baseweb="toast"] {
+    width: max-content;
+    box-shadow: 3px 3px 0 1px var(--opa-light);
+}
+
+[data-baseweb="toaster"] p {
+    width: max-content;
+    max-width: 28rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+/* iframe */
+[data-testid="stMarkdownContainer"] iframe {
+    background: var(--opa-white-normal);
+    box-shadow: 3px 3px 0 1px var(--shadow-light);
 }
 
 code {

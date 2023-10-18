@@ -8,7 +8,7 @@ def continue_insert_form(success_message, component=st):
         sent_form.success(success_message, icon="✅")
         if sent_form.form_submit_button("Insert again ➡️", use_container_width=True):
             st.session_state.pop("form-sent")
-            st.experimental_rerun()
+            st.rerun()
         return True
     return False
 

@@ -69,7 +69,7 @@ def page_selector(current_fragment, menu):
     if not is_login and mode == "logout":
         st.session_state.clear()
         skip_fragment()
-        st.experimental_rerun()
+        st.rerun()
     if mode == "url" and page_selected and page_selected != current_page:
         page_changed = st.session_state.pop("page-changed", None)
         different_fragment = current_fragment != st.session_state.get("last-fragment")

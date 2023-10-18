@@ -158,7 +158,7 @@ def form(**kwargs):
             data = {"category": f_sezione, "value": f_correzione}
             new_data = corr_extra + [data]
             st.session_state["extra-info"]["elements"] = new_data
-        st.experimental_rerun()
+        st.rerun()
     data["Others"] = c_form.text_input("Others", placeholder="Other relevant info")
 
     # form sumbit
@@ -169,7 +169,7 @@ def form(**kwargs):
             return st.warning("Insert at least one **extra**", icon="⚠️")
         if True:  # do something
             st.session_state["form-sent"] = True
-            st.experimental_rerun()
+            st.rerun()
 
 
 def titles(**kwargs):
@@ -213,6 +213,10 @@ def notification(**kwargs):
         Notification("This is a **custom** notification").custom(
             "auto_awesome", "#b28ef9"
         )
+    spacer(1)
+
+    if st.button("Toast 🥪", key="toast"):
+        st.toast("This is a _Streamlit_ **toast**!", icon="👋🏻")
 
 
 def selectbox(**kwargs):
@@ -279,7 +283,12 @@ def tables(**kwargs):
     filter_expander = st.expander("Advanced **filters**")
     filter_form = filter_expander.form("filtri")
     cols = filter_form.columns(4)
-    f_name = cols[0].selectbox("Name", [""] + sorted([row[1] for row in raw_data]))
+    f_name = cols[0].selectbox(
+        "Name",
+        sorted([row[1] for row in raw_data]),
+        index=None,
+        placeholder="Select name",
+    )
     f_sex = sex_select(cols[1], empty=True)
     f_ages = cols[2].slider("Age", value=(0, 1000), step=1)
     if cols[3].form_submit_button("Filter ✅", use_container_width=True):

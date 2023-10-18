@@ -14,7 +14,7 @@ def change_page(page, skip_clear=False):
         st.session_state["auto-change-page"] = True
     st.session_state["skip"] = True
     st.session_state["page-changed"] = True
-    st.experimental_rerun()
+    st.rerun()
 
 
 def skip_clear_session():
