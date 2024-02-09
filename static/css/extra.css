@@ -3,8 +3,17 @@
     margin-inline: auto;
 }
 
+.logo-small {
+    margin-inline: 30%;
+}
+
 .logo img {
     width: 100%;
+}
+
+.logo.maintenance {
+    max-width: 50rem;
+    margin-bottom: 3rem;
 }
 
 .material-icons {
@@ -12,9 +21,14 @@
     vertical-align: middle;
 }
 
+.art {
+    margin-inline: auto;
+    max-width: 33rem;
+}
+
 .art svg {
     width: 100%;
-    margin-top: -3rem;
+    margin-top: -5rem;
 }
 
 /* CONTATTI */
@@ -53,6 +67,13 @@
 
 
 /* REDIRECT */
+.redirects-btn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
 .redirect-btn {
     font-size: 1.2rem;
     background-color: var(--red-lighter);
@@ -123,4 +144,113 @@
 
 .progress-bar span:hover label {
     display: block;
+}
+
+/* STATS */
+
+.stat-n {
+    background: var(--opa-white-normal);
+    margin-block: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    box-shadow: 2px 2px 0 1px var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0rem;
+    align-items: center;
+}
+
+.stat-n .title {
+    color: var(--gray-darker);
+    text-align: center;
+}
+
+.stat-n.small .title {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.stat-n.medium .title {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.stat-n.big .title {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.stat-n.small .subtitle {
+    color: var(--gray-normal);
+    font-size: 0.8rem;
+}
+
+.stat-n.medium .subtitle {
+    color: var(--gray-normal);
+    font-size: 1.2rem;
+}
+
+.stat-n.big .subtitle {
+    color: var(--gray-normal);
+    font-size: 1.8rem;
+}
+
+.stat-n p {
+    margin: 0;
+}
+
+.stat-n>span {
+    width: 100%;
+    word-break: break-word;
+    text-align: center;
+}
+
+.stat-n.small>span {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-block: -0.75rem;
+}
+
+.stat-n.medium>span {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-block: -1rem;
+}
+
+.stat-n.big>span {
+    font-size: 8rem;
+    font-weight: 600;
+    margin-block: -3.5rem -3rem;
+}
+
+.stat-n .trend-up {
+    color: var(--tl-green-bg);
+}
+
+.stat-n .trend-down {
+    color: var(--tl-red-bg);
+}
+
+.stat-n .trend-flat {
+    color: var(--tl-yellow-bg);
+}
+
+.stat-n>span>span {
+    opacity: 0.5;
+    margin-left: 0.75rem;
+    vertical-align: baseline;
+}
+
+.stat-n.small>span>span {
+    font-size: 1.25rem;
+}
+
+.stat-n.medium>span>span {
+    font-size: 2rem;
+}
+
+.stat-n.big>span>span {
+    font-size: 4rem;
 }

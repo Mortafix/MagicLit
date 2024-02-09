@@ -228,6 +228,20 @@ td.funcs-col .container>i {
     margin-block: auto;
 }
 
+td.who-col {
+    font-size: 0.85rem;
+    line-height: 0.85rem;
+    width: 120px;
+}
+
+td.who-col i {
+    margin-left: 0.4rem;
+}
+
+th>.icon-head {
+    color: white;
+}
+
 /* pages */
 
 tr.pages {
@@ -271,6 +285,11 @@ tr.pages td a:hover {
     text-decoration: none;
 }
 
+tr.pages label {
+    color: white;
+    margin-right: 1rem;
+}
+
 /* FILTERS */
 
 .common-filters {
@@ -281,6 +300,7 @@ tr.pages td a:hover {
 }
 
 .common-filters .flt {
+    display: block;
     font-size: 1.2rem;
     background-color: var(--text);
     padding: 0.3rem 0.8rem;
@@ -289,6 +309,7 @@ tr.pages td a:hover {
     border: 2px solid transparent;
     box-shadow: 2px 2px 0px 1px var(--shadow-dark);
     width: max-content;
+    overflow: hidden;
 }
 
 .common-filters .flt i {

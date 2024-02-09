@@ -5,13 +5,8 @@
     max-width: 80rem;
 }
 
-.block-container>div>div:first-child[data-testid="stVerticalBlock"] {
+.block-container>[data-testid="stVerticalBlockBorderWrapper"]>div>[data-testid="stVerticalBlock"]:first-child {
     gap: 0;
-}
-
-.block-container>div>div>div:nth-child(3) {
-    visibility: collapse;
-    display: flex;
 }
 
 /* titles */
@@ -99,11 +94,11 @@ h4 span span {
     box-shadow: 5px 5px 0px 0px var(--opa-lighter);
 }
 
-[data-testid="stExpander"] ul {
+[data-testid="stExpander"]>details {
     border: 0;
 }
 
-[data-testid="stExpander"] .streamlit-expanderHeader p {
+[data-testid="stExpander"]>details>summary>span>[data-testid="stMarkdownContainer"]>p {
     font-size: 1.1rem;
 }
 
@@ -118,7 +113,7 @@ h4 span span {
 }
 
 /* alert */
-.stAlert {
+[role="alert"] {
     box-shadow: 3px 3px 2px 1px var(--opa-lighter);
 }
 
@@ -130,31 +125,41 @@ h4 span span {
 
 /* tabs */
 [data-baseweb="tab-list"] {
-    flex-wrap: wrap;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: var(--opa-white-normal);
+    margin-block: 0.5rem -1rem;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    justify-content: space-between;
+    overflow: auto;
 }
 
 button[role="tab"] {
-    background-color: var(--opa-white-normal) !important;
+    background-color: var(--opa-white-normal);
     padding: 0.6rem;
     box-shadow: 2px 2px 0 1px var(--opa-lighter);
-    border: 2px solid transparent;
     border-radius: 0.5rem;
+    width: 100%;
 }
 
 button[role="tab"]:hover {
+    background-color: var(--gray-lighter);
     color: var(--text);
-    font-size: 1.1rem;
-    border: 2px solid var(--main-light);
 }
 
 button[tabindex="0"] {
-    border: 2px solid transparent;
-    background-color: var(--main-light) !important;
+    background-color: var(--gray-light) !important;
+}
+
+button[tabindex="0"][role="tab"]:hover {
+    background-color: var(--gray-light);
 }
 
 button[tabindex="0"] p {
     color: var(--text);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
 }
 
 [data-baseweb="tab-highlight"] {
@@ -162,8 +167,7 @@ button[tabindex="0"] p {
 }
 
 [data-baseweb="tab-border"] {
-    margin-top: 0.5rem;
-    background: linear-gradient(90deg, var(--opa-light) 10%, transparent 100%);
+    display: none;
 }
 
 /* images */
@@ -250,6 +254,7 @@ button[title="View fullscreen"] {
     box-shadow: 3px 3px 0 1px var(--shadow-light);
 }
 
+/* code */
 code {
     color: var(--rainbow-8);
 }

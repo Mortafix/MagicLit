@@ -16,6 +16,7 @@ def smart_select(
     multi=False,
     sort=None,
     hide_if_empty=False,
+    placeholder=None,
     **kwargs,
 ):
     if hide_if_empty and not elements:
@@ -39,7 +40,7 @@ def smart_select(
         elements,
         format_func=fmt_func,
         key=key,
-        placeholder=f"Select {label}",
+        placeholder=placeholder or f"Seleziona {label}",
         **selection,
         **kwargs,
     )

@@ -1,5 +1,5 @@
 .navbar-container {
-    height: 8rem;
+    height: 7.25rem;
     background-color: var(--main-lighter);
     background: linear-gradient(180deg, var(--main-lighter) 70%, transparent 90%);
     width: 100%;
@@ -215,10 +215,6 @@
     animation: scale-down 2s ease-in-out;
 }
 
-.navbar .icons a:hover i.code {
-    animation: scale-up 2s ease-in-out;
-}
-
 .navbar .icons .noti-n {
     position: absolute;
     background-color: var(--red-lighter);
@@ -269,6 +265,10 @@
     border-radius: 0.7rem;
     box-shadow: 1px 1px 0 1px var(--shadow-dark);
     font-size: 1.3rem !important;
+}
+
+.navbar .insediamenti .normal {
+    color: white;
 }
 
 .navbar .insediamenti span {
@@ -332,14 +332,4 @@
         transform: scale(1);
     }
 
-}
-
-@keyframes scale-up {
-    15% {
-        transform: scale(1.2);
-    }
-
-    30% {
-        transform: scale(1);
-    }
 }

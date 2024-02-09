@@ -65,6 +65,7 @@
 .info-bars {
     display: flex;
     justify-content: space-between;
+    margin-block: 1rem;
 }
 
 .info-status {
@@ -74,11 +75,13 @@
     padding: 0.5rem 1rem;
     display: block;
     overflow: hidden;
+    border-radius: 2rem;
 }
 
 .info-status>a {
     color: var(--opa-dark);
     text-decoration: none;
+    padding-inline: 0.3rem;
 }
 
 .info-status b {
@@ -117,10 +120,11 @@
     line-height: 1rem;
     margin-right: 0.5rem;
     background-color: var(--opa-white-light);
-    padding: 0.1rem 0.5rem;
+    padding: 0.15rem 0.7rem;
     text-align: center;
     color: var(--opa-dark);
     margin-block: auto;
+    border-radius: 1rem;
 }
 
 .info-status.version .version .number {
@@ -173,6 +177,7 @@
     align-items: center;
     border: 3px solid transparent !important;
     cursor: default;
+    overflow: hidden;
 }
 
 .card-stats:hover:has(a) {

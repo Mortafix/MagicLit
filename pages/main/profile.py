@@ -28,7 +28,7 @@ def show(**kwargs):
         icon="ℹ️",
     )
     spacer(0.5)
-    st.error("_Streamlit_ version: **1.27.2**", icon="🐙")
+    st.error("_Streamlit_ version: **1.31.0**", icon="🐙")
     st.divider()
     left_col, right_col = st.columns((2, 5))
 
@@ -100,6 +100,9 @@ def show(**kwargs):
     h2(right_col, "Explanantion", "psychology_alt")
     with open(path.join(st.secrets.script.folder, "static/data/explanation.md")) as f:
         right_col.write(f.read())
+
+    # end page space
+    spacer()
 
 
 def settings(**kwargs):

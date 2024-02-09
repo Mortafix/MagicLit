@@ -19,6 +19,10 @@
     margin-top: 1rem;
 }
 
+.subh.closed {
+    opacity: 0.35;
+}
+
 .subh.today {
     background-color: var(--opa-white-normal);
     padding-inline: 0.5rem;
@@ -74,6 +78,10 @@
     box-shadow: 4px 4px 0 1px var(--opa-dark);
 }
 
+.viaggio-box-active:focus-within {
+    box-shadow: 2px 2px 0 1px var(--opa-lighter);
+}
+
 .viaggio-box .name a:hover i {
     color: var(--opa-dark);
 }
@@ -108,6 +116,10 @@
     margin: -3px 0.2rem 0 0;
 }
 
+.viaggio-box .stato i {
+    margin-right: 0.4rem;
+}
+
 .viaggio-box p {
     margin: 0;
     transition: max-height 0.15s ease-out;
@@ -132,6 +144,12 @@
 .viaggio-box:focus-within .who {
     margin-top: 0.5rem;
     max-height: fit-content;
+}
+
+.viaggio-box-active:focus-within p,
+.viaggio-box-active:focus-within .who {
+    margin-top: 0;
+    max-height: 0;
 }
 
 .viaggio-box div {
@@ -269,7 +287,7 @@
 
 .viaggio-new {
     border: 3px solid var(--main-light);
-    animation: green-flash 0.3s 7;
+    animation: green-flash 0.3s 10;
 }
 
 /* ICONS */
@@ -307,11 +325,20 @@ span.urgent {
     margin-top: -0.25rem;
 }
 
+.truck {
+    position: absolute;
+    bottom: -0.1rem;
+    right: 0.3rem;
+}
+
+.truck img {
+    width: 50px;
+}
+
 /* ARROWS */
 .sort-arrows {
     position: absolute;
-    width: 95%;
-    text-align: right;
+    right: 0.3rem;
     cursor: pointer;
     visibility: hidden;
 }
@@ -338,7 +365,7 @@ span.urgent {
 }
 
 .viaggio-box:focus-within .sort-arrows-bottom {
-    bottom: 0.2rem;
+    top: 3.2rem;
 }
 
 .viaggio-done .sort-arrows {
@@ -353,7 +380,7 @@ span.urgent {
 .date-selector .dates {
     background-color: var(--text);
     width: fit-content;
-    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    padding: 0.5rem 1rem;
     color: white;
     font-size: 1.2rem;
     border-radius: 1rem;
@@ -361,7 +388,7 @@ span.urgent {
     z-index: 2;
 }
 
-.dates>i {
+.dates>span>i {
     color: white;
     opacity: 0.6;
     margin: -0.2rem 0.5rem 0 0.5rem;
@@ -373,11 +400,14 @@ span.urgent {
 
 .dates>a {
     color: var(--red-lighter);
-    margin: 0.3rem;
 }
 
 .dates>a:hover {
     color: var(--red-light);
+}
+
+.dates .labels {
+    margin-inline: 0.3rem;
 }
 
 .dates .today {
@@ -385,7 +415,7 @@ span.urgent {
     text-align: center;
     padding: 0.1rem 2rem;
     border-radius: 1rem;
-    margin-left: 0.2rem;
+    margin-left: 0.5rem;
 }
 
 .dates .today:hover {
@@ -395,6 +425,27 @@ span.urgent {
 .dates .today a {
     color: white;
     text-decoration: none;
+}
+
+/* FILTRI */
+
+.common-filters.compressed {
+    margin-top: -0.75rem;
+}
+
+.common-filters.compressed .flt {
+    margin-top: 0.75rem;
+}
+
+.common-filters.compressed .flt,
+.common-filters.compressed:hover .flt:last-child {
+    display: none;
+}
+
+.common-filters.compressed:hover .flt,
+.common-filters.compressed .flt:last-child,
+.common-filters.compressed .flt-active {
+    display: block;
 }
 
 /* Message */
@@ -415,7 +466,6 @@ span.urgent {
     padding: 0.5rem 1rem;
     border-radius: 1rem;
     box-shadow: 2px 2px 0 1px var(--opa-light);
-    width: max-content;
 }
 
 .message span {

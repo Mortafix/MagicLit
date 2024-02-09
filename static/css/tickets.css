@@ -161,7 +161,7 @@
 .contacts-mail {
     background-color: white;
     text-align: center;
-    padding-block: 1rem;
+    padding: 1rem;
     border-radius: 1rem;
     box-shadow: 4px 4px 0 0px var(--opa-dark);
     border: 4px solid transparent;
@@ -173,6 +173,10 @@
     margin: 0;
 }
 
+.contacts-mail p span {
+    font-weight: 700;
+}
+
 .contacts-mail a {
     text-decoration: none;
     font-size: 2.5rem;
@@ -180,11 +184,12 @@
 }
 
 .contacts-mail .mail {
+    line-break: anywhere;
     color: var(--tl-blue-bg);
 }
 
 .contacts-mail:hover {
-    border: 4px solid var(--red-lighter);
+    border: 5px solid var(--blue-dark);
 }
 
 .contacts-mail:hover .mail {

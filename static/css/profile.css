@@ -6,7 +6,8 @@
     display: block;
     box-shadow: 4px 4px 0 2px var(--opa-dark);
     position: relative;
-    min-height: 14rem;
+    min-height: 15rem;
+    padding-bottom: 3rem;
 }
 
 .profile .header {

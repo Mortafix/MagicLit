@@ -235,8 +235,7 @@ def selectbox(**kwargs):
     )
     hello_select(
         select_form,
-        "Option selected and empty value",
-        selected=2,
+        "Option with empty value",
         empty=True,
         key="selected",
     )

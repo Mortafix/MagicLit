@@ -20,7 +20,7 @@ st.set_page_config(
 )
 
 
-def main(fragment, params, static_attr):
+def main(fragment, static_attr):
 
     # This is the custom user I used to auth in the app
     user = st_user()
@@ -36,11 +36,6 @@ def main(fragment, params, static_attr):
     multiple_local_css(get_version())
     remote_css("https://fonts.googleapis.com/icon?family=Material+Icons")
     remove_streamlit_menu()
-
-    # ---- DIRECT PAGE
-    # since Streamlit's state is not saved in the browser session, I store the redirect
-    # information for pages to be accessed after authentication.
-    set_direct_page_link(app_menu, params)
 
     # ---- LOGIN
     if not user:
@@ -90,21 +85,22 @@ def main(fragment, params, static_attr):
 
 if __name__ == "__main__":
     try:
-        # use this to set specific query parameters (custom actions before loading)
-        url_params = st.experimental_get_query_params()
+        # since Streamlit's state is not saved in the browser session, I store the
+        # redirect information for pages to be accessed after authentication.
+        set_direct_page_link(app_menu, st.query_params)
 
         # learn about how I used fragment (main app's power) in its file
         current_fragment = get_fragment()
 
         # clean url before run
-        st.experimental_set_query_params()
+        st.query_params.clear()
 
         # some kind of static attribute to pass in every single page
         static_attr = 42
 
         # Run Barry! RUN!
-        main(current_fragment, url_params, static_attr)
+        main(current_fragment, static_attr)
     except Exception as exc:
         # in this exception wrapper usually I sent exception to Sentry
-        print(exc)
-        # raise exc
+        # print(exc)
+        raise exc

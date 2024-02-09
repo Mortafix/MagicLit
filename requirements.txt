@@ -33,7 +33,7 @@ requests==2.31.0
 rich==13.4.2
 six==1.16.0
 smmap==5.0.0
-streamlit==1.27.2
+streamlit==1.31.0
 streamlit-autorefresh==1.0.1
 streamlit-url-fragment==0.2.1
 tenacity==8.2.2

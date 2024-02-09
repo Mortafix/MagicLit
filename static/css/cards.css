@@ -97,6 +97,7 @@
     width: fit-content;
     margin-inline: auto;
     margin-block: 0.5rem -0.5rem;
+    white-space: nowrap;
 }
 
 .card-sub.verified {
@@ -111,8 +112,12 @@
     background-color: var(--tl-red-bg);
 }
 
+.card-sub.base {
+    background-color: var(--gray-light);
+}
+
 .card-sub>i {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.1rem;
     margin-right: 0.3rem;
 }
 
@@ -126,6 +131,10 @@
 
 .card-sub.disable>i {
     color: var(--tl-red-text);
+}
+
+.card-sub.base>i {
+    color: var(--gray-darker);
 }
 
 /* TAGS */
@@ -143,6 +152,14 @@
 
 .card-sub.tag>i {
     color: var(--gray-darker);
+}
+
+/* LAST SEEN */
+
+.card .sub .last-seen {
+    font-size: 0.85rem;
+    color: var(--gray-normal);
+    margin-block: 0.7rem -0.5rem;
 }
 
 /* MINI */

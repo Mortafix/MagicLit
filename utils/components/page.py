@@ -43,7 +43,5 @@ def session_on_change_page():
 
 
 def set_direct_page_link(menu, params):
-    if page := params.get("page"):
-        page_url = page[0]
-        if menu.get(page_url):
-            st.session_state["direct-page"] = page_url
+    if params.get("page") and menu.get(params.page):
+        st.session_state["direct-page"] = params.page
