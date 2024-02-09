@@ -6,6 +6,7 @@
 	- Titles : text_fields @ component-title
 	- Elements : dashboard @ component-element
 	- Map : map @ component-map
+	- Charts : analytics @ component-charts
 	- Extra : area_chart @ component-extra
 
 * Superhero : self_improvement

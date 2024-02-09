@@ -5,7 +5,10 @@ cachetools==5.3.1
 certifi==2023.5.7
 charset-normalizer==3.1.0
 click==8.1.3
+contourpy==1.2.0
+cycler==0.12.1
 decorator==5.1.1
+fonttools==4.48.1
 gitdb==4.0.10
 GitPython==3.1.31
 idna==3.4
@@ -13,8 +16,10 @@ importlib-metadata==6.7.0
 importlib-resources==5.12.0
 Jinja2==3.1.2
 jsonschema==4.17.3
+kiwisolver==1.4.5
 markdown-it-py==3.0.0
 MarkupSafe==2.1.3
+matplotlib==3.8.2
 mdurl==0.1.2
 numpy==1.25.0
 packaging==23.1
@@ -26,6 +31,7 @@ pyarrow==12.0.1
 pydeck==0.8.1b0
 Pygments==2.15.1
 Pympler==1.0.1
+pyparsing==3.1.1
 pyrsistent==0.19.3
 python-dateutil==2.8.2
 pytz==2023.3

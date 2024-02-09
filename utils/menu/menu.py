@@ -9,6 +9,7 @@ main_pages = {
     "component-selectbox": components.selectbox,
     "component-table": components.tables,
     "component-map": components.map,
+    "component-charts": components.charts,
     "component-extra": components.extra,
     "hero-thor": heroes.thor,
     "hero-flash": heroes.flash,

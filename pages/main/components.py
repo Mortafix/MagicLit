@@ -4,6 +4,7 @@ from functools import partial
 from os import path
 
 import streamlit as st
+from utils.components.charts import Chart
 from utils.components.elements import (Attribute, CombinedAttribute,
                                        ListAttribute, SubAttribute, display)
 from utils.components.extra import (cards_display, date_selector,
@@ -12,7 +13,7 @@ from utils.components.filters import check_filtri, common_filters
 from utils.components.form import continue_insert_form, multiple_form_items
 from utils.components.html import Notification, h2, h4, spacer, title
 from utils.components.map import geomap
-from utils.components.selectbox import hello_select, sex_select
+from utils.components.selectbox import hello_select, sex_select, smart_select
 from utils.components.table import (change_table_page, change_table_sort,
                                     csv_report, table)
 from utils.web.fragment import manage_fragment, skip_fragment
@@ -335,7 +336,7 @@ def map(**kwargs):
     title(st, 1, "Map", "map")
     st.info("Geo **map** with points location `(Utils > Components > map)`", icon="ℹ️")
     spacer(1)
-
+    # map
     points = [
         ("Palau (Italy)", 41.17919, 9.38152, "#10bece"),
         ("Milan (Italy)", 45.46796, 9.18178, "#10bece"),
@@ -344,6 +345,104 @@ def map(**kwargs):
         ("Zagreb (Croatia)", 45.80724, 15.96757),
     ]
     geomap(points, height=700, base_color="#000")
+
+
+def charts(**kwargs):
+    title(st, 1, "Charts", "analytics")
+    st.info(
+        "Custom beutiful **charts** with multiple options "
+        "`(Utils > Components > charts)`",
+        icon="ℹ️",
+    )
+    spacer(1)
+
+    # bar & plot
+    left_col, right_col = st.columns(2)
+    data = {
+        "2022": [1.456, 0.891, 0.547],
+        "2023": [1.854, 1.042, 0.981],
+        "2024": [3.094, 2.391, 1.953],
+    }
+    labels = ["Facebook", "Youtube", "Whatsapp"]
+    colors = ["#3678e2", "#dd3737", "#45d147"]
+
+    # bar
+    h4(left_col, "Bar chart", "bar_chart")
+    with left_col.expander("Settings"):
+        horizontal = st.toggle("Horizontal bars")
+        grid = st.toggle("Show grid")
+        ticks = st.toggle("Show axis ticks", True)
+        legend = st.toggle("Show legend", True)
+        width = st.slider("Bar width", 0.1, 1.0, 0.7)
+    spacer(0.5)
+    chart = Chart(data, component=left_col)
+    chart.bar(bar_width=width, horizontal=horizontal)
+    chart.options((9, 4.25), grid, ticks, colors, labels=labels)
+    chart.show(
+        "Popular Social Networks",
+        "Fake report about the most popular social networks",
+        "Year",
+        "Users (milions)",
+        legend=legend,
+    )
+
+    # plot
+    h4(right_col, "Plot chart", "show_chart")
+    with right_col.expander("Settings"):
+        grid = st.toggle("Show grid", key="grid2")
+        ticks = st.toggle("Show axis ticks", True, key="ticks2")
+        legend = st.toggle("Show legend", True, key="legend2")
+        line = st.slider("Line width", 0.5, 3.0, 1.5, step=0.5)
+        markers = {"": "None", "o": "Circle", "s": "Square", "D": "Diamond"}
+        marker = smart_select(st, markers, "Marker")
+        size = st.slider("Marker size", 5, 12, 7)
+    spacer(0.5)
+    chart = Chart(data, component=right_col)
+    chart.plot(line_width=line, marker=marker, marker_size=size)
+    chart.options((9, 4.25), grid, ticks, colors, labels=labels)
+    chart.show(
+        "Popular Social Networks",
+        "Fake report about the most popular social networks",
+        "Year",
+        "Users (milions)",
+        legend=legend,
+    )
+
+    # area
+    left_col, right_col = st.columns(2)
+    h4(left_col, "Area chart", "area_chart")
+    with left_col.expander("Settings"):
+        grid = st.toggle("Show grid", key="grid3")
+        ticks = st.toggle("Show axis ticks", True, key="ticks3")
+        legend = st.toggle("Show legend", True, key="legend3")
+    spacer(0.5)
+    chart = Chart(data, component=left_col)
+    chart.area()
+    chart.options((9, 4.25), grid, ticks, colors, labels=labels)
+    chart.show(
+        "Popular Social Networks",
+        "Fake report about the most popular social networks",
+        "Year",
+        "Users (milions)",
+        legend=legend,
+    )
+
+    # donut
+    h4(right_col, "Donut chart", "donut_large")
+    with right_col.expander("Settings"):
+        width = st.slider("Donut width", 0.1, 1.0, 0.4, step=0.1)
+        legend = st.toggle("Show legend", True, key="legend4")
+    spacer(0.5)
+    data = {social: data.get(year)[-1] for year, social in zip(data, labels)}
+    chart = Chart(data, component=right_col)
+    chart.donut(size=width)
+    chart.options((2, 3), color="#731089", labels=labels)
+    chart.show(
+        subtitle="Popular Social Networks",
+        xlabel="Year",
+        ylabel="Users (milions)",
+        legend=legend,
+    )
 
 
 def extra(**kwargs):
