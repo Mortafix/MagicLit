@@ -11,6 +11,7 @@ from utils.components.extra import (cards_display, date_selector,
 from utils.components.filters import check_filtri, common_filters
 from utils.components.form import continue_insert_form, multiple_form_items
 from utils.components.html import Notification, h2, h4, spacer, title
+from utils.components.map import geomap
 from utils.components.selectbox import hello_select, sex_select
 from utils.components.table import (change_table_page, change_table_sort,
                                     csv_report, table)
@@ -328,6 +329,21 @@ def tables(**kwargs):
     side_section = st.sidebar.container()
     funcs = {3: lambda x: {"M": "Male", "F": "Female"}.get(x)}
     csv_report(table_data, "nintendo_characters", funcs, component=side_section)
+
+
+def map(**kwargs):
+    title(st, 1, "Map", "map")
+    st.info("Geo **map** with points location `(Utils > Components > map)`", icon="ℹ️")
+    spacer(1)
+
+    points = [
+        ("Palau (Italy)", 41.17919, 9.38152, "#10bece"),
+        ("Milan (Italy)", 45.46796, 9.18178, "#10bece"),
+        ("Vienna (Austria)", 48.20263, 16.36842, "#11d64f"),
+        ("Paris (France)", 48.863697576, 2.361657337, "#dd0f24"),
+        ("Zagreb (Croatia)", 45.80724, 15.96757),
+    ]
+    geomap(points, height=700, base_color="#000")
 
 
 def extra(**kwargs):

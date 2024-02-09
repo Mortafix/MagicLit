@@ -5,6 +5,7 @@
 	- Notifications : notifications @ component-notification
 	- Titles : text_fields @ component-title
 	- Elements : dashboard @ component-element
+	- Map : map @ component-map
 	- Extra : area_chart @ component-extra
 
 * Superhero : self_improvement
